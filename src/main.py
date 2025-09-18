@@ -1,7 +1,14 @@
 from src.prompts import PROMPTS
 from src.utils import generar_historia
+from src.quiz import generar_quiz
+from colorama import Fore, Style, init
+
+init(autoreset=True)
 
 def main():
+
+    # Preguntar edad
+    edad = input(Fore.CYAN + "👧 ¿Cuántos años tienes?: " + Style.RESET_ALL).strip()
 
     # Temas
     mapa_temas = {
@@ -13,13 +20,12 @@ def main():
     while True:
 
         # Pregunta tema
-        print("Entendiendo el mundo actual: IA como puente de aprendizaje para niñas")
-        print("Temas disponibles:")
-        print("1. cambio_climatico")
-        print("2. emociones")
-        print("3. seguridad")
+        print(Fore.CYAN + "\n🌍 Entendiendo el mundo actual: IA como puente de aprendizaje para niñas\n")
+        print(Fore.YELLOW + "1. 🌍 Cambio Climático")
+        print(Fore.MAGENTA + "2. 💖 Emociones")
+        print(Fore.GREEN + "3. 🛡️ Seguridad")
 
-        opcion = input("Elige un tema (1-3): ").strip()
+        opcion = input(Fore.CYAN + "\n👉 Elige un tema (1-3): " + Style.RESET_ALL).strip()
         tema = mapa_temas.get(opcion)
 
         if not tema:
@@ -27,19 +33,21 @@ def main():
             continue
 
         # Genera historia
-        print("\nGenerando historia...\n")
-        historia = generar_historia(PROMPTS[tema])
-        print(historia)
+        print(Fore.BLUE + "\n✨ Generando historia...\n")
+        historia = generar_historia(PROMPTS[tema], edad)
+        print(Fore.WHITE + Style.BRIGHT + historia + Style.RESET_ALL)
+
 
         # Preguntar qué hacer después
-        siguiente = input("\nPon 4 para finalizar o 6 para otra opción: ").strip()
+        siguiente = input(Fore.CYAN + "\n🔄 Pon 4 para finalizar o 6 para otra opción: " + Style.RESET_ALL).strip()
         if siguiente == "4":
-            print("¡Hasta luego!")
+            generar_quiz(tema, edad)
+            print(Fore.GREEN + "👋 ¡Hasta luego! Sigue aprendiendo y divirtiéndote 🌟")
             break
         elif siguiente == "6":
             continue
         else:
-            print("Opción no válida, finalizando.")
+            print(Fore.RED + "❌ Opción no válida, finalizando.")
             break
 
 if __name__ == "__main__": 

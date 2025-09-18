@@ -39,11 +39,11 @@ python -m src.main
 
 Al ejecutar el proyecto, verás en la terminal algo como:
 
-Entendiendo el mundo actual: IA como puente de aprendizaje para niñas
-Temas disponibles:
-1. cambio_climatico
-2. emociones
-3. seguridad
+Entendiendo el mundo actual: IA como puente de aprendizaje para niñas  
+Temas disponibles (con colores para facilitar la identificación visual):  
+1. cambio_climatico  
+2. emociones  
+3. seguridad  
 Elige un tema (1-3):
 
 1. Escribe uno de los temas:  
@@ -51,4 +51,8 @@ Elige un tema (1-3):
    - `emociones`  
    - `seguridad`
 
-2. El sistema generará una **historia corta** adaptada al tema elegido.
+2. El sistema generará una **historia corta** adaptada al tema elegido, mostrando los textos con colores para mejorar la experiencia y comprensión.
+
+3. Al finalizar, el programa te ofrecerá un **quiz interactivo** generado automáticamente por IA, con preguntas de opción múltiple sobre el tema elegido, para reforzar el aprendizaje de manera divertida.
+
+---
