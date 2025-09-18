@@ -1,5 +1,7 @@
 # Proyecto de Prompt Engineering: Entendiendo el mundo actual: IA como puente de aprendizaje para niñas
 
+# Diego Olivera
+
 Este proyecto fue desarrollado como parte de un proyecto personal para entrega académica.  
 Su objetivo es ayudar a niñas en edad de aprendizaje (12 y 5 años) a comprender mejor temas actuales como:
 
